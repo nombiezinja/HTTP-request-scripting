@@ -1,9 +1,9 @@
 function getAndPrintHTML (obj) {
 
-    var https = require('https');
+  var https = require('https');
 
 
-  var output = https.get("https://" + requestOptions.host + requestOptions.path, function(response) {
+  var output = https.get("https://" + obj.host + obj.path, function(response) {
 
     response.setEncoding('utf8');
 
@@ -29,4 +29,4 @@ var requestOptions = {
   path: '/http-examples/step3.html'
 };
 
-getAndPrintHTML();
+getAndPrintHTML(requestOptions);
