@@ -1,4 +1,6 @@
- var https = require('https');
+var https = require('https');
+
+module.exports = getHTML
 
 function getHTML (options, callback) {
 
@@ -20,7 +22,6 @@ function getHTML (options, callback) {
     });
 
   });
-
 
 }
 
