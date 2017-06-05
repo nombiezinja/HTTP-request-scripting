@@ -1,6 +1,8 @@
+var https = require('https');
+
 function getAndPrintHTML () {
 
-    var https = require('https');
+   body = "";
 
   var requestOptions = {
     host: 'sytantris.github.io',
@@ -14,7 +16,6 @@ function getAndPrintHTML () {
 
     response.on('data', function(data){
       // console.log('--Chunk received. Length:'+ data.length + " --" );
-      body = "";
       body += data;
       console.log(body);
     });

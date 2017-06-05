@@ -1,7 +1,8 @@
+var https = require('https');
+
 function getAndPrintHTML (obj) {
 
-  var https = require('https');
-
+   body = "";
 
   var output = https.get("https://" + obj.host + obj.path, function(response) {
 
@@ -10,7 +11,6 @@ function getAndPrintHTML (obj) {
 
     response.on('data', function(data){
       // console.log('--Chunk received. Length:'+ data.length + " --" );
-      body = "";
       body += data;
       console.log(body);
     });
